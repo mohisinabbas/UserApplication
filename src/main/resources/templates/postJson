@@ -1,0 +1,100 @@
+ {
+        "id": 1,
+        "firstName": "Mohisin",
+        "middleName": "A",
+        "lastName": "Mohammed",
+        "address": {
+            "id": 1,
+            "city": "Louisville",
+            "state": "KY",
+            "zipCode": 40222
+        },
+        "phone": "5026566768"
+ }
+ 
+ {
+        "id": 2,
+        "firstName": "Najiya",
+        "middleName": "A",
+        "lastName": "Mohammed",
+        "address": {
+            "id": 1,
+            "city": Louisville,
+            "state": KY,
+            "zipCode": 40222
+        },
+        "phone": "1234567890"
+ }
+ 
+ 
+{
+        "id": 3,
+        "firstName": "BatMan",
+        "middleName": "A",
+        "lastName": "Mohammed",
+        "address": {
+            "id": 2,
+            "city": Vizag,
+            "state": AP,
+            "zipCode": 560037
+        },
+        "phone": "2234567890"
+}
+
+
+{
+        "id": 4,
+        "firstName": "SuperMan",
+        "middleName": "A",
+        "lastName": "Mohammed",
+        "address": {
+            "id": 2,
+            "city": Vizag,
+            "state": AP,
+            "zipCode": 560037
+        },
+        "phone": "3234567890"
+}
+
+{
+        "id": 5,
+        "firstName": "SpiderMan",
+        "middleName": "A",
+        "lastName": "Mohammed",
+        "address": {
+            "id": 2,
+            "city": Vizag,
+            "state": AP,
+            "zipCode": 560037
+        },
+        "phone": "4234567890"
+}
+
+
+{
+        "id": 6,
+        "firstName": "IronMan",
+        "middleName": "A",
+        "lastName": "Mohammed",
+        "address": {
+            "id": 3,
+            "city": Hyderabad,
+            "state": TL,
+            "zipCode": 600039
+        },
+        "phone": "5234567890"
+}
+
+{
+        "id": 7,
+        "firstName": "HeMan",
+        "middleName": "A",
+        "lastName": "Mohammed",
+        "address": {
+            "id": 3,
+            "city": Hyderabad,
+            "state": TL,
+            "zipCode": 600039
+        },
+        "phone": "6234567890"
+}
