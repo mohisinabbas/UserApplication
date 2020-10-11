@@ -1,0 +1,10 @@
+Insert into address(id,city,state,zip_code) values(1,'Louisville','KY',40222),
+(2,'Minneapolis','MN',55343),
+(3, 'Vizag','AP',530026)
+
+INSERT INTO user(FIRST_NAME,MIDDLE_NAME,LAST_NAME,PHONE,ADDRESS_ID) values('Mohisin','A','Mohammed',5026566768,1),
+('Bat','A','Man',1026566768,2),
+('Spider','A','Man',2026566768,3),
+('IronMan','A','Moh',3026566768,3),
+('SuperMan','A','Moh',4026566768,2),
+('Thor','A','Moh',6026566768,1)

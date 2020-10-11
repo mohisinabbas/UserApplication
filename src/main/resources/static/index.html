@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+<h4>Welcome to User API</h4>
+<br/>
+
+<button onclick="getUsers()">GET All Users</button><br/>
+<p id="demo"></p>
+
+Enter user id: <input name=id type=text id=userid >
+<button onclick="getUserById(document.getElementById('userid').value)">GET UserById</button>
+<p id="demo2"></p>
+
+Add a user(JSON format) <textarea name=adduser type=text id=adduser rows="10" cols="50"></textarea>
+<button onclick="addUser(document.getElementById('adduser').value)">POSTUser</button>
+<p id="demo3"></p>
+
+Update a user(JSON format) <input name=updateuser type=text id=updateuser size="100">
+<button onclick="updateUser(document.getElementById('updateuser').value)">PUTUser</button>
+<p id="demo4"></p>
+
+DELETE a user <input name=deleteuser type=text id=deleteuser size="100">
+<button onclick="deleteUser(document.getElementById('deleteuser').value)">DELETEUser</button>
+<p id="demo5"></p>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
