@@ -28,7 +28,7 @@ public class UserController {
 	public Optional<User> getUserById(@PathVariable int id) { 
 			return userService.getUserById(id);
 	}
-	
+	//Get User by Phone
 	@GetMapping(path = "/userByPhone")
 	public Optional<User> getUserByPhone(@RequestParam(value = "phone", required = true) String phone) {
 		return userService.getUserByPhone(phone);
