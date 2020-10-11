@@ -19,6 +19,7 @@ import com.example.user.repository.UserRepository;
 import com.example.user.service.UserService;
 
 @RestController
+@RequestMapping("/")
 public class UserController {
 
 	@Autowired
