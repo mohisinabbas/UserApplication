@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -19,7 +21,9 @@ public class User {
 	private String firstName;
 	private String middleName;
 	private String lastName;
-	@OneToOne(cascade = CascadeType.ALL)
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "ADDRESS_ID")
 	private Address address;
 	
 	private String phone;

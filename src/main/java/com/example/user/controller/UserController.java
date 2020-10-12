@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.user.model.User;
@@ -26,7 +27,7 @@ public class UserController {
 	public UserService userService;
 
 	@GetMapping(path = "/user/{id}")
-	public Optional<User> getUserById(@PathVariable int id) { 
+	public User getUserById(@PathVariable int id) { 
 			return userService.getUserById(id);
 	}
 	//Get User by Phone
@@ -37,11 +38,12 @@ public class UserController {
 	
 	@GetMapping(path="/hello/{id}")
 	public String sayHello(@PathVariable int id){
-		User user = userService.getUserById(id).get();
-		return "Hello "+user.getFirstName();
+		
+		return "Hello "+id;
 	}
 	
 	@GetMapping(path = "/user/all")
+	@ResponseBody
 	public List<User> getAllUsers() {
 		return userService.getAllUsers();
 	}
@@ -54,9 +56,9 @@ public class UserController {
 
 	@PutMapping(path = "/user/{userId}")
 	public String updateUser(@PathVariable int userId, @RequestBody User user) throws Exception {
-		// Optional<Optional<User>> op = Optional.of(userService.getUserById(userId));
-		if (userService.getUserById(userId).isPresent()) {
-			User checkUser = userService.getUserById(userId).get();
+		
+		if (userService.getUserById(userId)!=null) {
+			User checkUser = userService.getUserById(userId);
 			checkUser.setFirstName(user.getFirstName());
 			checkUser.setMiddleName(user.getMiddleName());
 			checkUser.setLastName(user.getLastName());
@@ -69,9 +71,10 @@ public class UserController {
 
 	@DeleteMapping(path = "/user/{userId}")
 	public String deleteUser(@PathVariable int userId) {
-		if (userService.getUserById(userId).isPresent()) {
-			userService.deleteUser(userId);
-			return "Deleted succesfully";
+		if (userService.getUserById(userId)!=null) {
+			
+			return userService.deleteUser(userId);
+			
 		}else {
 			return "User Not Found";
 		}

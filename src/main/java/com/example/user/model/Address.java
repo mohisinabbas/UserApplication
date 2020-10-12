@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -11,19 +14,22 @@ import javax.persistence.Table;
 public class Address {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String city;
 	private String state;
 	private int zipCode;
-
+	
+	@ManyToOne
+	private User user;
+	
 	public Address() {
 
 	}
 	
-	public Address(int id, String city, String state, int zipCode) {
+	public Address(int addressid, String city, String state, int zipCode) {
 		super();
-		this.id = id;
+		this.id = addressid;
 		this.city = city;
 		this.state = state;
 		this.zipCode = zipCode;
@@ -33,8 +39,8 @@ public class Address {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int addressid) {
+		this.id = addressid;
 	}
 
 	
