@@ -20,8 +20,9 @@ public class Address {
 	private String state;
 	private int zipCode;
 	
-	@ManyToOne
-	private User user;
+	/*
+	 * @ManyToOne private User user;
+	 */
 	
 	public Address() {
 
