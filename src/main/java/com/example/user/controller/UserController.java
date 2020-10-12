@@ -34,7 +34,13 @@ public class UserController {
 	public Optional<User> getUserByPhone(@RequestParam(value = "phone", required = true) String phone) {
 		return userService.getUserByPhone(phone);
 	}
-
+	
+	@GetMapping(path="/hello/{id}")
+	public String sayHello(@PathVariable int id){
+		User user = userService.getUserById(id).get();
+		return "Hello "+user.getFirstName();
+	}
+	
 	@GetMapping(path = "/user/all")
 	public List<User> getAllUsers() {
 		return userService.getAllUsers();
